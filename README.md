@@ -1,3 +1,11 @@
+## Fco Ríos 
+## Apart from default React create app readme ##
+## ############
+This project is done following the tutorial Apollo-GraphQL here: 
+https://www.howtographql.com/react-apollo/1-getting-started/
+
+## ############
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
