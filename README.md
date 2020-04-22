@@ -3,6 +3,9 @@
 ## ############
 This project is done following the tutorial Apollo-GraphQL here: 
 https://www.howtographql.com/react-apollo/1-getting-started/
+When I get to the backend section, which is Node Tutorial (https://www.howtographql.com/graphql-js/0-introduction) in this tuto, I
+jumped to this other tutorial (https://medium.com/mehak-vohra/using-graphql-to-query-your-firebase-realtime-database-a6e6cbd6aa3a) 
+for using Firebase in the project. After completing this tutorial y followed the previous one
 
 ## ############
 
