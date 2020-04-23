@@ -1,13 +1,21 @@
-## Fco Ríos 
+## Fco Ríos 17/04/2020
 ## Apart from default React create app readme ##
-## ############
+## ############################################################################################################
 This project is done following the tutorial Apollo-GraphQL here: 
 https://www.howtographql.com/react-apollo/1-getting-started/
 When I get to the backend section, which is Node Tutorial (https://www.howtographql.com/graphql-js/0-introduction) in this tuto, I
-jumped to this other tutorial (https://medium.com/mehak-vohra/using-graphql-to-query-your-firebase-realtime-database-a6e6cbd6aa3a) 
-for using Firebase in the project. After completing this tutorial y followed the previous one
+jumped to this other tutorial:
+  video: https://www.youtube.com/watch?v=8D9XnnjFGMs&t=203s
+  github repo: https://github.com/arjunyel/firestore-apollo-graphql/blob/master/src/index.ts
+  I splitted src/index.js file from this remote repo in the files located in /server/src (resolvers, server and typeDef files). TypeDef is the graphQL schema.
+for using Firebase in the project (Cloud Firestore database). After completing this tutorial y followed with the previous one.
 
-## ############
+## Levantar el servidor graphQL local
+yarn graphql_server
+Esto levantará la instancia graphQL local en http://localhost:4000 (puerto definido en el file /.env)
+
+## ############################################################################################################
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

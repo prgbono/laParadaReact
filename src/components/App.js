@@ -10,7 +10,7 @@ import { Users } from "./Users";
 export const App = () => (
   <div className="App">
     <header className="App-header">
-      <p>Hello there!</p>
+      <p>Hello there!!</p>
       <Users />
     </header>
   </div>

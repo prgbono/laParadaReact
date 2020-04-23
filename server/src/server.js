@@ -1,26 +1,29 @@
 // This is the file where the GraphQL server is created
 
-import express from 'express';
-import { ApolloServer } from 'apollo-server-express'
-import firebase from 'firebase';
+const { ApolloServer } = require("apollo-server");
+const admin = require("firebase-admin");
 require ('dotenv').config();
-import typeDefs from './typeDefs';
-import resolvers from './resolvers';
+const typeDefs = require("./typeDefs");
+const resolvers = require("./resolvers");
+const serviceAccount = require('../../service-account.json');
 
-const app = express();
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req }) => {
-    return {
-      headers: req.headers, 
-    };
-  }
+  engine: {
+    apiKey: '<APOLLO ENGINE APIKEY HERE>'
+  },
+  introspection: true
 });
 
-server.applyMiddleware({ app });
-
-app.listen({ port:4000 }, () => {
-  console.log("Server has started 🚀 http://localhost:4000/graphql");
+server.listen({ port: process.env.GRAPHQL_LOCAL_SERVER_PORT || 4000 })
+.then(({ url }) => {
+  console.log(`🚀🚀🚀 Server has started at ${url} 🚀🚀🚀`);
 })
+
+
