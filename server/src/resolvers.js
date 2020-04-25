@@ -25,6 +25,51 @@ const resolvers = {
         .collection('users')
         .get();
       return users.docs.map(user => user.data());
+    },
+
+    async productos() {
+      const productos = await admin
+        .firestore()
+        .collection('productos')
+        .get();
+      return productos.docs.map(producto => producto.data());
+    },
+
+    async categorias() {
+      const categorias = await admin
+        .firestore()
+        .collection('categorias')
+        .get();
+      return categorias.docs.map(categoria => categoria.data());
+    },
+
+    async especialidades() {
+      const especialidades = await admin
+        .firestore()
+        .collection('especialidades')
+        .get();
+      return especialidades.docs.map(especialidad => especialidad.data());
+    }
+  },
+
+  Mutation: {
+    crearCategoria: async (parent, args, context, info) => {
+      const CategoriaCreada = await admin
+        .firestore()
+        .collection('categorias')
+        .doc()
+        .set(args);
+      // return CategoriaCreada;
+    },
+
+    crearEspecialidad: async (parent, args, context, info) => {
+      const EspecialidadCreada = await admin
+        .firestore()
+        .collection('especialidades')
+        .doc()
+        .set(args);
+      console.log('resolver done');
+      // return EspecialidadCreada;
     }
   }
 }

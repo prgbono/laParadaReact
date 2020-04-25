@@ -32,3 +32,12 @@ ReactDOM.render(
 )
 
 serviceWorker.unregister();
+
+/*
+1. You’re importing the required dependencies from the installed packages.
+2. Here you create the httpLink that will connect your ApolloClient instance with the GraphQL API, your GraphQL 
+  server will be running on http://localhost:4000.
+3. Now you instantiate ApolloClient by passing in the httpLink and a new instance of an InMemoryCache.
+4. Finally you render the root component of your React app. The App is wrapped with the higher-order component 
+  ApolloProvider that gets passed the client as a prop.
+*/

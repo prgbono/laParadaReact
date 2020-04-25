@@ -12,8 +12,33 @@ const typeDefs = gql `
     citizen: Boolean
   }
 
+  type Producto {
+    nombre: String!
+    categoria: String!
+    especialidad: String!
+    existencias: Float
+    precio: Float
+    pvp: Float
+  }
+
+  type Especialidad {
+    nombre: String!
+  }
+
+  type Categoria {
+    nombre: String!
+  }
+
   type Query {
-    users: [User]
+    users: [User],
+    categorias: [Categoria],
+    especialidades: [Especialidad],
+    productos: [Producto],
+  }
+
+  type Mutation {
+    crearCategoria (nombre: String!): Categoria!
+    crearEspecialidad (nombre: String!): Especialidad
   }
 `
 
