@@ -7,7 +7,7 @@ When I get to the backend section, which is Node Tutorial (https://www.howtograp
 jumped to this other tutorial:
   video: https://www.youtube.com/watch?v=8D9XnnjFGMs&t=203s
   github repo: https://github.com/arjunyel/firestore-apollo-graphql/blob/master/src/index.ts
-  I splitted src/index.js file from this remote repo in the files located in /server/src (resolvers, server and typeDef files). TypeDef is the graphQL schema.
+  I splitted src/index.js file from this remote repo in the files located in /server/ (resolvers, server and typeDef files). TypeDef is the graphQL schema.
 for using Firebase in the project (Cloud Firestore database). After completing this tutorial y followed with the previous one.
 
 ## Levantar el servidor graphQL local

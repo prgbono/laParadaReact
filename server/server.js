@@ -5,7 +5,7 @@ const admin = require("firebase-admin");
 require ('dotenv').config();
 const typeDefs = require("./typeDefs");
 const resolvers = require("./resolvers");
-const serviceAccount = require('../../service-account.json');
+const serviceAccount = require('../service-account.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
