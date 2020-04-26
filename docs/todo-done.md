@@ -1,5 +1,6 @@
 TODO
 - Las mutations me da error en el server GraphQL y no se porqué aún...
+- Recopilar todas las queries en una carpeta Queries tal como está hecho en ClaveX
 - Probar a quitar el objeto Firebase de src/Firebase (y los imports de Firebase en el lado cliente). Esto 
   es porque supuestamente no hace falta tras haberlo añadido a /server/scr/server.js. Puedo borrar el archivo src/firebase? No debería haber presencia de Firebase en el front si ya GraphQL se ha conectado con éste. 
 - Imrpimir en PDF todos los tutoriales seguidos y meterlos en /docs
@@ -8,6 +9,7 @@ TODO
 DONE
 26/04/2020
 - Me sobra la carpeta src de /server/src???? Sí. Antes de borrala mover archivos y leer toda la parte de Backend del tuto apollo-graph
+- Hacer queries mediante GraphQL -> https://www.howtographql.com/react-apollo/2-queries-loading-links/
 
 25/04/2020
 - Empezar a dEfinir el schema (tyoeDef) correspondiente a La Parada.
