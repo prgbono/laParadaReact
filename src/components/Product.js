@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Product extends Component {
-  render () {
-    return (
+const Product = () => {
+  console.log('Product Component: ',this.props)
+  return (
+    <div>
       <div>
-        <div>
-          PRODUCTS LIST
-          {this.props.product.nombre} - {this.props.product.especialidad} - {this.props.product.categoria} 
-        </div>
+        PRODUCTS LIST Component
+        {this.props.product.nombre} - {this.props.product.especialidad} - {this.props.product.categoria} 
       </div>
-    )
-  }
+    </div>
+  )  
 }
 
 export default Product
