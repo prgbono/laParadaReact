@@ -1,11 +1,11 @@
 import React from 'react'
 import { useMutation, useQuery } from "react-apollo";
-import { UPDATE_CATEGORY, GET_CATEGORIES } from "../Queries";
+import { SET_CATEGORY, GET_CATEGORIES } from "../Queries";
 
 
 export function CategoriesList() {
   const { loading, error, data } = useQuery(GET_CATEGORIES)
-  const [updateCategory] = useMutation(UPDATE_CATEGORY);
+  const [setCategory] = useMutation(SET_CATEGORY);
 
   if (loading) return <div>Cargando categorías...</div>
   if (error) return <div>Error cargando categorías, `${error.message}`</div>
@@ -21,7 +21,7 @@ export function CategoriesList() {
         <form
           onSubmit = {e => {
             e.preventDefault();
-            updateCategory({ variables: { id, nombre : input.value } });
+            setCategory({ variables: { id:'ZvltwOmrYETF0JYLTJkC', nombre : input.value } });
             input.value = '';
           }}
         >

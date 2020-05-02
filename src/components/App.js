@@ -4,6 +4,8 @@ import '../styles/App.css';
 import { ProductsList } from "./ProductsList";
 import { CategoriesList } from "./CategoriesList";
 import { Product } from "./Product";
+import { AddCategory } from "./AddCategory";
+import { SpecialtiesList } from "./SpecialtiesList";
 
 // import { useUserProfiles } from "../hooks";
 // import { Users } from "./Users";
@@ -24,9 +26,11 @@ class App extends Component {
   render() {
     return ( 
     <>
-      <CategoriesList />
+      <SpecialtiesList />
+      {/* <CategoriesList />
       <ProductsList />
-      {/* <Product /> */}
+      <Product /> 
+      <AddCategory />*/}
     </>  
     )
   }

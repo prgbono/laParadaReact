@@ -39,12 +39,10 @@ const typeDefs = gql `
   }
 
   type Mutation {
-    addCategory (nombre: String!): Category!,
+    addCategory (nombre: String!): Category,
     addSpecialty (nombre: String!): Specialty,
-
-    setCategory (nombre: String!): Category!,
-    setSpecialty (nombre: String!): Specialty!,
-    
+    setCategory (nombre: String!, id:ID!): Category!,
+    setSpecialty (nombre: String!, id:ID!): Specialty!,
   }
 `
 

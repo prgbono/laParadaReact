@@ -16,7 +16,6 @@ const resolvers = {
     },
 
     getProducts: async () => {
-      console.log('REsolve getProducts')
       let products = [];
       try {
         await admin
@@ -26,7 +25,7 @@ const resolvers = {
           .then((querySnapshot) => {
             if (querySnapshot) {
               querySnapshot.forEach(product => {
-                console.log('Id of each product document: ', product.id)
+                // el id de cada doc está en product.id
                 products.push(product.data())
               })
             }
@@ -34,7 +33,6 @@ const resolvers = {
               console.log('No hay productos disponibles');
             }
           })  
-        console.log('REsolver productos: ',products);  
         return products
       }
       catch (error) {
@@ -56,7 +54,6 @@ const resolvers = {
       const { id } = args;
       let product;
       try {
-        console.log('Resolver getProduct, args.id: ', args.id)
         await admin
           .firestore()
           .collection('productos')
@@ -65,8 +62,7 @@ const resolvers = {
           .then((item) => {
             if (!item.exists) console.log('No existe ese producto')
             else product = item.data();
-          })
-        console.log('Resolver product. Product: ',product);          
+          })        
         return product;
       }
       catch (error) {
@@ -98,17 +94,43 @@ const resolvers = {
         .collection('categorias')
         .doc()
         .set(args);
-      // return CategoriaCreada;
+      return newCategory;
+    },
+
+    setCategory: async (parent, args, context, info) => {
+      console('REsolcver setCategory')
+      const { id, nombre } = args;
+      console.log('args: ',args);
+      await admin
+        .firestore()
+        .collection('categorias')
+        .doc(args.id)
+        .update({nombre: args.nombre})
+        .then(() => console.log('Categoría actualizada'))
+        .catch((error) => console.error("Error actualizando categoría: ", error))
     },
 
     addSpecialty: async (parent, args, context, info) => {
-      const newSpecialty = await admin
+      await admin
         .firestore()
         .collection('especialidades')
         .doc()
         .set(args);
-      // return EspecialidadCreada;
-    }
+      // return newSpecialty;
+    },
+
+    setSpecialty: async (parent, args, context, info) => {
+      console.log('REsolcver setSpecialty, args: ',args)
+      const { id, nombre } = args;
+      await admin
+        .firestore()
+        .collection('especialidades')
+        .doc(args.id)
+        .update({nombre: args.nombre})
+        .then(() => console.log('Especialidad actualizada'))
+        .catch((error) => console.error("Error actualizando especialidad: ", error))
+    },
+
   }
 }
 

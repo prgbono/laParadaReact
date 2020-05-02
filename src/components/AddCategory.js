@@ -1,9 +1,8 @@
-// import React from 'react'
+import React from 'react'
 import { useMutation } from "react-apollo";
 import { ADD_CATEGORY } from "../Queries";
 
-
-function AddCategory () {
+export const AddCategory = () => {
   let input;
   const [addCategory, { data }] = useMutation(ADD_CATEGORY);
 
@@ -21,7 +20,7 @@ function AddCategory () {
           input = node;
         }}
       />
-      <button type='submit'> Añadir Categoría </button>
+      <button type='submit'>Añadir Categoría</button>
       </form>
     </div>
   )

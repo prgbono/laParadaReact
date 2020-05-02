@@ -1,16 +1,13 @@
 ## HOY
-- listar categorias, especialidades y productos
-- listar producto
-- Update categorias
-- Update especialidad
-- update producto
-- remove categoria
-- remove especialidad
-- remove producto
-- Las mutations me da error en el server GraphQL y no se porqué aún...
-- REach router path='product/:id'
+- Remove categories y specialties
+- Definir en Firestore la relación especialidades y categorías
+- Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
+  tener claro el UI. Buscar por ahí en AntD
 
-## TOD
+## TODO
+- Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
+- REach router path='product/:id'
+- CRUD de las colecciones. DOne -> C y R. 
 - Traer a React el id de documento / colección de Firebase que se modifica / crea / consulta
 - Como gestionar lo de los id que no devuelve graphQL. Ver cómo se trabaja con esto. Posibilidad de firegraph o algo que te facilite el manejo de ID's
 - Reach Router para dividir las vistas de categorias, productos y eso
@@ -31,7 +28,15 @@
 
 ## DONE
 SÁB 2/5/20
+- Set / update categories
 - Listar un producto mediante su id de doc / collection en la query. Un get.
+- listar categorias, especialidades y productos
+- COmponentes para Specialties
+    - lista
+    - individual NO HECHO
+- Resolvers para Specialties
+    - listar
+    - update
 
 MIE - 29/04/2020
 - Escibir en los archivos de query si son queries o mutations

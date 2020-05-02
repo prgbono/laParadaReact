@@ -9,22 +9,19 @@ export const GET_CATEGORIES = gql`
 `
 
 export const ADD_CATEGORY = gql`
-  mutation addCategory (
-    $nombre: String!
-  ){
+  mutation addCategory($nombre: String!){
     addCategory(nombre: $nombre){
-      id
+      nombre
     }
   }
 `
 
-export const UPDATE_CATEGORY = gql`
+export const SET_CATEGORY = gql`
   mutation setCategory(
-    $nombre: String,
     $id: String!
+    $nombre: String,
   ){
     setCategory(nombre: $nombre){
-      id
       nombre
     }
   }
