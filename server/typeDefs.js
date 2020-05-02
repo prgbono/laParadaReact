@@ -12,7 +12,7 @@ const typeDefs = gql `
     citizen: Boolean
   }
 
-  type Producto {
+  type Product {
     nombre: String!
     categoria: String!
     especialidad: String!
@@ -21,24 +21,30 @@ const typeDefs = gql `
     pvp: Float
   }
 
-  type Especialidad {
+  type Specialty {
     nombre: String!
   }
 
-  type Categoria {
+  type Category {
     nombre: String!
+    id: ID
   }
 
   type Query {
-    users: [User],
-    categorias: [Categoria],
-    especialidades: [Especialidad],
-    productos: [Producto],
+    getUsers: [User],
+    getCategories: [Category],
+    getSpecialties: [Specialty],
+    getProducts: [Product],
+    getProduct(id: ID!): Product,
   }
 
   type Mutation {
-    crearCategoria (nombre: String!): Categoria!
-    crearEspecialidad (nombre: String!): Especialidad
+    addCategory (nombre: String!): Category!,
+    addSpecialty (nombre: String!): Specialty,
+
+    setCategory (nombre: String!): Category!,
+    setSpecialty (nombre: String!): Specialty!,
+    
   }
 `
 

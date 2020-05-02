@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import logo from '../logo.svg';
 import '../styles/App.css';
 import { ProductsList } from "./ProductsList";
+import { CategoriesList } from "./CategoriesList";
+import { Product } from "./Product";
 
 // import { useUserProfiles } from "../hooks";
 // import { Users } from "./Users";
@@ -20,7 +22,13 @@ import { ProductsList } from "./ProductsList";
 
 class App extends Component {
   render() {
-    return <ProductsList />
+    return ( 
+    <>
+      <CategoriesList />
+      <ProductsList />
+      {/* <Product /> */}
+    </>  
+    )
   }
 }
 

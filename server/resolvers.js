@@ -3,23 +3,11 @@
 const admin = require("firebase-admin");
 
 const resolvers = {
-  // User: {
-  //   async users(user) {
-  //     try {
-  //       const users = await admin
-  //         .firestore()
-  //         .collection('users')
-  //         .get();
-  //       return users.docs.map(user => user.data());
-  //     }
-  //     catch (error) {
-  //       throw new ApolloError(error);
-  //     }
-  //   }
-  // },
+/* Los resolvers es un objeto que tiene una propiedad igual al nombre de la Query, 
+   esta función se ejecutará cuando se llame esa query.*/
 
   Query: {
-    async users() {
+    async getUsers() {
       const users = await admin
         .firestore()
         .collection('users')
@@ -27,34 +15,85 @@ const resolvers = {
       return users.docs.map(user => user.data());
     },
 
-    async productos() {
-      const productos = await admin
-        .firestore()
-        .collection('productos')
-        .get();
-      return productos.docs.map(producto => producto.data());
+    getProducts: async () => {
+      console.log('REsolve getProducts')
+      let products = [];
+      try {
+        await admin
+          .firestore()
+          .collection('productos')
+          .get()
+          .then((querySnapshot) => {
+            if (querySnapshot) {
+              querySnapshot.forEach(product => {
+                console.log('Id of each product document: ', product.id)
+                products.push(product.data())
+              })
+            }
+            else{
+              console.log('No hay productos disponibles');
+            }
+          })  
+        console.log('REsolver productos: ',products);  
+        return products
+      }
+      catch (error) {
+        console.log('Error: ', error);
+      }
     },
 
-    async categorias() {
-      const categorias = await admin
+    // Se puede hacer de las dos formas
+    // async products() {
+    //   const products = await admin
+    //     .firestore()
+    //     .collection('productos')
+    //     .get();
+    //   return products.docs.map(product => product.data());
+    // },
+
+    
+    getProduct: async (parent, args) => {
+      const { id } = args;
+      let product;
+      try {
+        console.log('Resolver getProduct, args.id: ', args.id)
+        await admin
+          .firestore()
+          .collection('productos')
+          .doc(args.id)
+          .get()
+          .then((item) => {
+            if (!item.exists) console.log('No existe ese producto')
+            else product = item.data();
+          })
+        console.log('Resolver product. Product: ',product);          
+        return product;
+      }
+      catch (error) {
+        console.log('Error: ', error);
+      }
+    },
+
+    async getCategories() {
+      const categories = await admin
         .firestore()
         .collection('categorias')
         .get();
-      return categorias.docs.map(categoria => categoria.data());
+      return categories.docs.map(category => category.data());
     },
 
-    async especialidades() {
-      const especialidades = await admin
+    async getSpecialties() {
+      const specialties = await admin
         .firestore()
         .collection('especialidades')
         .get();
-      return especialidades.docs.map(especialidad => especialidad.data());
+      return specialties.docs.map(specialty => specialty.data());
     }
   },
 
   Mutation: {
-    crearCategoria: async (parent, args, context, info) => {
-      const CategoriaCreada = await admin
+    addCategory: async (parent, args, context, info) => {
+      const newCategory = await admin
         .firestore()
         .collection('categorias')
         .doc()
@@ -62,13 +101,12 @@ const resolvers = {
       // return CategoriaCreada;
     },
 
-    crearEspecialidad: async (parent, args, context, info) => {
-      const EspecialidadCreada = await admin
+    addSpecialty: async (parent, args, context, info) => {
+      const newSpecialty = await admin
         .firestore()
         .collection('especialidades')
         .doc()
         .set(args);
-      console.log('resolver done');
       // return EspecialidadCreada;
     }
   }
