@@ -98,7 +98,7 @@ const resolvers = {
     },
 
     setCategory: async (parent, args, context, info) => {
-      console('REsolcver setCategory')
+      console.log('REsolcver setCategory')
       const { id, nombre } = args;
       console.log('args: ',args);
       await admin
@@ -107,6 +107,19 @@ const resolvers = {
         .doc(args.id)
         .update({nombre: args.nombre})
         .then(() => console.log('Categoría actualizada'))
+        .catch((error) => console.error("Error borrando categoría: ", error))
+    },
+
+    removeCategory: async (parent, args, context, info) => {
+      console.log('Resolver removeCategory')
+      const { id, nombre } = args;
+      console.log('args: ',args);
+      await admin
+        .firestore()
+        .collection('categorias')
+        .doc(args.id)
+        .delete()
+        .then(() => console.log('Categoría borrada'))
         .catch((error) => console.error("Error actualizando categoría: ", error))
     },
 
@@ -129,6 +142,19 @@ const resolvers = {
         .update({nombre: args.nombre})
         .then(() => console.log('Especialidad actualizada'))
         .catch((error) => console.error("Error actualizando especialidad: ", error))
+    },
+
+    removeSpecialty: async (parent, args, context, info) => {
+      console.log('Resolver removeSpecialty')
+      const { id } = args;
+      console.log('args: ',args);
+      await admin
+        .firestore()
+        .collection('especialidades')
+        .doc(args.id)
+        .delete()
+        .then(() => console.log('Especialidad borrada'))
+        .catch((error) => console.error("Error borrando especialidad: ", error))
     },
 
   }

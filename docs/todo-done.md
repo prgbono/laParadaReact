@@ -1,12 +1,12 @@
 ## HOY
-- Remove categories y specialties
 - Definir en Firestore la relación especialidades y categorías
 - Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
   tener claro el UI. Buscar por ahí en AntD
 
 ## TODO
-- Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
 - REach router path='product/:id'
+- Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
+  Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
 - CRUD de las colecciones. DOne -> C y R. 
 - Traer a React el id de documento / colección de Firebase que se modifica / crea / consulta
 - Como gestionar lo de los id que no devuelve graphQL. Ver cómo se trabaja con esto. Posibilidad de firegraph o algo que te facilite el manejo de ID's
@@ -27,6 +27,9 @@
 
 
 ## DONE
+DOM 3/5/20
+- Remove categories y specialties
+
 SÁB 2/5/20
 - Set / update categories
 - Listar un producto mediante su id de doc / collection en la query. Un get.

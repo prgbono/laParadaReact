@@ -26,3 +26,13 @@ export const SET_SPECIALTY = gql`
     }
   }
 `
+
+export const REMOVE_SPECIALTY = gql`
+mutation removeSpecialty(
+  $id: String!
+){
+  removeSpecialty(nombre: $nombre){
+    nombre
+  }
+}
+`

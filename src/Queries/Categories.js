@@ -26,3 +26,13 @@ export const SET_CATEGORY = gql`
     }
   }
 `
+
+export const REMOVE_CATEGORY = gql`
+mutation removeCategory(
+  $id: String!
+){
+  removeCategory(nombre: $nombre){
+    nombre
+  }
+}
+`
