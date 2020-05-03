@@ -1,9 +1,20 @@
-## HOY
-- Definir en Firestore la relación especialidades y categorías
+## HOY  
 - Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
-  tener claro el UI. Buscar por ahí en AntD
+  tener claro el UI. Buscar por ahí en AntD (https://ant.design/) que es lo usado en HK ClaveX
+  Template Ant Design Pro Master -> https://scaffold.ant.design/#/scaffolds/ant-design-pro
+  He encontrado una template que puede ser bastante interesante. Está en Downloads / My app. 
+  - [ ] Asegurarte que es de react-create-app. 
+  - [x] Arreglar lo de locale y echarle un vistazo comparando pantallas y tus necesidades
+  - [x] Cambiar idioma
+  - [ ] Matchear pantallas con lo que tienes en la mente. Login, tabla de productos, de especialidades...
+  - [ ] Traspasar todo lo hecho en laParadaReact a ver si es posible. 
+    - [ ] Servidor local GraphQL y Apollo
+    - [ ] Conexión con Firestore
+    - [ ] App.js… carpeta de documentación, archivo de readme…. Todo-done, version de react
+
 
 ## TODO
+- Definir en Firestore la relación especialidades y categorías
 - REach router path='product/:id'
 - Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
   Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
@@ -28,6 +39,7 @@
 
 ## DONE
 DOM 3/5/20
+- Inicio de AntD. Posibilidad de trabajar con esta template: https://github.com/ant-design/ant-design-pro cuya documentación está aquí: https://pro.ant.design/docs/getting-started
 - Remove categories y specialties
 
 SÁB 2/5/20
