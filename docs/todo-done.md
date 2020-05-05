@@ -1,20 +1,11 @@
 ## HOY  
-- Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
-  tener claro el UI. Buscar por ahí en AntD (https://ant.design/) que es lo usado en HK ClaveX
-  Template Ant Design Pro Master -> https://scaffold.ant.design/#/scaffolds/ant-design-pro
-  He encontrado una template que puede ser bastante interesante. Está en Downloads / My app. 
-  - [ ] Asegurarte que es de react-create-app. 
-  - [x] Arreglar lo de locale y echarle un vistazo comparando pantallas y tus necesidades
-  - [x] Cambiar idioma
-  - [ ] Matchear pantallas con lo que tienes en la mente. Login, tabla de productos, de especialidades...
-  - [ ] Traspasar todo lo hecho en laParadaReact a ver si es posible. 
-    - [ ] Servidor local GraphQL y Apollo
-    - [ ] Conexión con Firestore
-    - [ ] App.js… carpeta de documentación, archivo de readme…. Todo-done, version de react
-
+- MEter componentes básicos de AntD en pages/Dashboard que va a ser la pág principal. 
 
 ## TODO
-- Definir en Firestore la relación especialidades y categorías
+- Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId
+- Añadir un LocationProvider para el histórico?? Puede ser bastante interesante y está  implementado en ClaveX
+- Hace falta una folder src/pages??
+- Definir en Firestore la relación especialidades y categorías. Echar un vistazo https://www.youtube.com/watch?v=jm66TSlVtcc
 - REach router path='product/:id'
 - Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
   Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
@@ -35,9 +26,17 @@
 - Probar a quitar el objeto Firebase de src/Firebase (y los imports de Firebase en el lado cliente). Esto 
   es porque supuestamente no hace falta tras haberlo añadido a /server/scr/server.js. Puedo borrar el archivo src/firebase? No debería haber presencia de Firebase en el front si ya GraphQL se ha conectado con éste. 
 - Imrpimir en PDF todos los tutoriales seguidos y meterlos en /docs
+- Gráficas. Añadir dependiendo de las ventas y los pedidos...
+- Interfaz movil. Flutter? ReactNative?
 
 
 ## DONE
+MAR 5/5/2020
+- Reach router en App.js
+
+LUN 4/5/2020
+- Repo creado para Ant Design Pro MyApp https://pro.ant.design/docs/layout
+
 DOM 3/5/20
 - Inicio de AntD. Posibilidad de trabajar con esta template: https://github.com/ant-design/ant-design-pro cuya documentación está aquí: https://pro.ant.design/docs/getting-started
 - Remove categories y specialties
@@ -77,4 +76,23 @@ LUN - 27/04/2020
 - Es necesario FirebaseFunctions??
 - Clean de comments y de consoles
 - Actualizar en el readme si el vídeo que estoy siguiendo ahora es correcto hacerlo saber en el Readme.
-- Actualizar en el readme la forma de levantar el servidor local :3000 y el servidor graphQL en el puerto 4000/graph con el comando     (script definido en package.json) graph
+- Actualizar en el readme la forma de levantar el servidor local :3000 y el servidor graphQL en el puerto 4000/graph con el comando (script definido en package.json) graph
+
+
+## ANT DESIGN PRO
+- Usar la carpeta mock
+  - [ ] Traspasar todo lo hecho en laParadaReact o al reves??? 
+    - [ ] Servidor local GraphQL y Apollo
+    - [ ] Conexión con Firestore
+    - [ ] App.js… carpeta de documentación, archivo de readme…. changeLog, Todo-done, version de react
+- Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
+  tener claro el UI. Buscar por ahí en AntD (https://ant.design/) que es lo usado en HK ClaveX
+  Template Ant Design Pro Master -> https://scaffold.ant.design/#/scaffolds/ant-design-pro
+  He encontrado una template que puede ser bastante interesante. Está en Downloads / My app. 
+  - [ ] Asegurarte que es de react-create-app. 
+  - [x] Arreglar lo de locale y echarle un vistazo comparando pantallas y tus necesidades. 
+    Solución -> Añadir el nodo 'resolutions' en el package y hacer yarn install 
+  - [x] Cambiar idioma
+  - [x] Matchear pantallas con lo que tienes en la mente. Login, tabla de productos, de especialidades...
+  - [x] Cambiar datos de prueba a ver qué tal se ve
+- Archivos de idioma español

@@ -1,39 +1,99 @@
-import React, { Component } from 'react';
-// import logo from '../logo.svg';
+import React from 'react';
 import '../styles/App.css';
 import { ProductsList } from "./ProductsList";
 import { CategoriesList } from "./CategoriesList";
-import { Product } from "./Product";
-import { AddCategory } from "./AddCategory";
+// import { Product } from "./Product";
+// import { AddCategory } from "./AddCategory";
 import { SpecialtiesList } from "./SpecialtiesList";
-
 // import { useUserProfiles } from "../hooks";
 // import { Users } from "./Users";
+import '../styles/App.css';
+import { Router, Link, useParams } from '@reach/router'
+import Dashboard from '../pages/Dashboard';
 
-// export const App = () => (
-//   <div className="App">
-//     <header className="App-header">
-//       <p>Hello there!!</p>
-//       <Users />
-//       <ProductsList />
-//     </header>
-//   </div>
-// ); 
+const App = () => {
+  let InicioMenuButton = () => (
+    <Dashboard />
+  )
 
-// export default App
+  // const ProductsMenuButton = () => {
+  //   const params = useParams()
+  //   console.log('params: ', params)
+  //   return (
+  //     <div>
+  //       <h1>Productos</h1>
+  //       {/* <h1>Productos {params.id}</h1> */}
+  //     </div>
+  //   )
+  // }
 
-class App extends Component {
-  render() {
-    return ( 
-    <>
-      <SpecialtiesList />
-      {/* <CategoriesList />
-      <ProductsList />
-      <Product /> 
-      <AddCategory />*/}
-    </>  
+  const ProductsListMenuButton = () => {
+    return(
+      <div>
+        <p>Esto es la página PRoductsList</p>
+        <ProductsList />
+      </div>
     )
   }
-}
+  
+  // const CategoriesMenuButton = () => (
+  //   <div>
+  //     <h1>Categorías</h1>
+  //     <nav>
+  //       <Link to="/">Inicio</Link> |{" "}
+  //       <Link to="products">Productos</Link> |{" "}
+  //       <Link to="categories">Categorias</Link> |{" "}
+  //       <Link to="specialties">Especialidades</Link> 
+  //     </nav>
+  //   </div>
+  // )
+
+  const CategoriesListMenuButton = () => {
+    return(
+      <div>
+        <p>Esto es la página CategoriesList</p>
+        <CategoriesList />
+      </div>
+    )
+  }
+
+  // const SpecialtiesMenuButton = () => (
+  //   <div>
+  //     <h1>Especialidades</h1>
+  //   </div>
+  // )
+
+  const SpecialtiesListMenuButton = () => {
+    return(
+      <div>
+        <p>Esto es la página SpecialtiesList</p>
+        <SpecialtiesList />
+      </div>
+    )
+  }
+
+  return(
+    <div className="App">
+      <p>Hello there!</p>
+      <nav>
+        <Link to="/">Inicio</Link> |{" "}
+        <Link to="products">Productos</Link> |{" "}
+        <Link to="products/123">Producto 123</Link> |{" "}
+        <Link to="categories">Categorias</Link> |{" "}
+        <Link to="specialties">Especialidades</Link> 
+      </nav>
+      <Router>
+        <InicioMenuButton path="/" />
+        {/* <ProductsMenuButton path="products/:productId" /> */}
+        <ProductsListMenuButton path="products" />
+        {/* <CategoriesMenuButton path="categories/:categorieId" /> */}
+        <CategoriesListMenuButton path="categories" />
+        {/* <SpecialtiesMenuButton path="specialties/:specialtiesId" /> */}
+        <SpecialtiesListMenuButton path="specialties" />
+      </Router>
+    </div>
+  )
+
+}; 
 
 export default App
