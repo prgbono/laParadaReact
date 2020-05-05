@@ -5,7 +5,7 @@ import React from 'react'
 const Dashboard = () => {
   console.log('Component pages/Dashboard')
   return (
-    <p>Esto es el componente Dashboard que será la página de Inicio</p>
+    <p>Esto es el componente Dashboard que será la pág de Inicio</p>
   )
 }
 
