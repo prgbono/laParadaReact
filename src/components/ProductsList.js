@@ -10,12 +10,22 @@ export const ProductsList = () => {
   if (error) return <div>Error cargando productos, `${error.message}`</div>
   const productsToRender = data.getProducts;
   console.log('ProductsList: ',productsToRender);
-  // No trae el id como field
 
-  return (
-    <div>
-      {() => productsToRender.map(product => 
-      <Product key={product.id} product = {product}/>)} 
-    </div>
+  return(
+    <>
+    {productsToRender.map(product => {
+      // console.log('Product: ', product)
+      return(
+        <Product
+          key={product}
+          product = {product}
+        >
+        </Product>
+      )
+    })}
+    </>
   )
 }
+
+
+

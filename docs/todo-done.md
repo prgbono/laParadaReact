@@ -1,14 +1,17 @@
 ## HOY  
-- MEter componentes básicos de AntD en pages/Dashboard que va a ser la pág principal. 
+- Pasar logo a png y reducir el tamaño
+- Ver ReachLink de ReachRouter que implementé ayer en Link (components)
+- Cargar el contenido dependiendo de la opción elegida en el sidebar
+- Qué es Emotion- https://emotion.sh/docs/introduction
 
 ## TODO
-- Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId
+- Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
+- Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId - path='product/:id'
+- Pestaña principal Inicio: PEdidos del día, productos más vendidos, productos bajos de stock, mejores clientes....
 - Añadir un LocationProvider para el histórico?? Puede ser bastante interesante y está  implementado en ClaveX
 - Hace falta una folder src/pages??
 - Definir en Firestore la relación especialidades y categorías. Echar un vistazo https://www.youtube.com/watch?v=jm66TSlVtcc
-- REach router path='product/:id'
-- Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
-  Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
+- Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
 - CRUD de las colecciones. DOne -> C y R. 
 - Traer a React el id de documento / colección de Firebase que se modifica / crea / consulta
 - Como gestionar lo de los id que no devuelve graphQL. Ver cómo se trabaja con esto. Posibilidad de firegraph o algo que te facilite el manejo de ID's
@@ -26,11 +29,18 @@
 - Probar a quitar el objeto Firebase de src/Firebase (y los imports de Firebase en el lado cliente). Esto 
   es porque supuestamente no hace falta tras haberlo añadido a /server/scr/server.js. Puedo borrar el archivo src/firebase? No debería haber presencia de Firebase en el front si ya GraphQL se ha conectado con éste. 
 - Imrpimir en PDF todos los tutoriales seguidos y meterlos en /docs
-- Gráficas. Añadir dependiendo de las ventas y los pedidos...
+- Gráficas. Añadir dependiendo de las ventas y los pedidos... Librería Nivo https://nivo.rocks/components
+- TODO's y consoles
 - Interfaz movil. Flutter? ReactNative?
 
 
 ## DONE
+JUE 7/5/2020
+
+MIE 6/5/2020
+- Logo sin optimizar
+- MEter componentes básicos de AntD en pages/Dashboard que va a ser la pág principal. 
+
 MAR 5/5/2020
 - Reach router en App.js
 

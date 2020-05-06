@@ -8,7 +8,7 @@ import { SpecialtiesList } from "./SpecialtiesList";
 // import { useUserProfiles } from "../hooks";
 // import { Users } from "./Users";
 import '../styles/App.css';
-import { Router, Link, useParams } from '@reach/router'
+import { Router, Link } from '@reach/router'
 import Dashboard from '../pages/Dashboard';
 
 const App = () => {
@@ -28,11 +28,9 @@ const App = () => {
   // }
 
   const ProductsListMenuButton = () => {
+    console.log('App.js - ProductsListMenuButton');
     return(
-      <div>
-        <p>Esto es la página PRoductsList</p>
-        <ProductsList />
-      </div>
+      <ProductsList />
     )
   }
   
@@ -74,7 +72,6 @@ const App = () => {
 
   return(
     <div className="App">
-      <p>Hello there!</p>
       <nav>
         <Link to="/">Inicio</Link> |{" "}
         <Link to="products">Productos</Link> |{" "}
