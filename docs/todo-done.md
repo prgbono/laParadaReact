@@ -1,5 +1,4 @@
-## HOY  
-- Pasar logo a png y reducir el tamaño
+## HOY 
 - Ver ReachLink de ReachRouter que implementé ayer en Link (components)
 - Cargar el contenido dependiendo de la opción elegida en el sidebar
 - Qué es Emotion- https://emotion.sh/docs/introduction
@@ -36,6 +35,7 @@
 
 ## DONE
 JUE 7/5/2020
+- Pasar logo a png y reducir el tamaño
 
 MIE 6/5/2020
 - Logo sin optimizar

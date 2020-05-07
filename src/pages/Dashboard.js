@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Layout, Menu } from 'antd';
 import { DesktopOutlined, PieChartOutlined, FileOutlined, UserOutlined } from '@ant-design/icons';
-import logo from '../assets/logo/logo.jpg'
+import logo from '../assets/logo/logo.png'
 import { Link } from '../components/Link'
 
 
