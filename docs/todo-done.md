@@ -1,15 +1,21 @@
 ## HOY 
-- Ver ReachLink de ReachRouter que implementé ayer en Link (components)
 - Cargar el contenido dependiendo de la opción elegida en el sidebar
-- Qué es Emotion- https://emotion.sh/docs/introduction
 
 ## TODO
+- Qué es Emotion- https://emotion.sh/docs/introduction
+- Continuar los links/tutoriales:
+  https://www.howtographql.com/react-apollo/2-queries-loading-links/
+  https://www.apollographql.com/docs/react/data/local-state/
+- ClaveX - Src/Fragments/Sider.js/config - EL objeto config es el menú. Hacerlo igual
+- Es necesario el componente Link??
+- Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto
 - Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
 - Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId - path='product/:id'
 - Pestaña principal Inicio: PEdidos del día, productos más vendidos, productos bajos de stock, mejores clientes....
 - Añadir un LocationProvider para el histórico?? Puede ser bastante interesante y está  implementado en ClaveX
 - Hace falta una folder src/pages??
 - Definir en Firestore la relación especialidades y categorías. Echar un vistazo https://www.youtube.com/watch?v=jm66TSlVtcc
+- Muy interesante sobre Firestore y su rendimiento: https://medium.com/firebase-developers/why-is-my-cloud-firestore-query-slow-e081fb8e55dd
 - Las mutations (creaciones) me da error en el server GraphQL y no se porqué aún...
 - CRUD de las colecciones. DOne -> C y R. 
 - Traer a React el id de documento / colección de Firebase que se modifica / crea / consulta
@@ -36,6 +42,7 @@
 ## DONE
 JUE 7/5/2020
 - Pasar logo a png y reducir el tamaño
+- Ver Link de ReachRouter que implementé ayer en Link (components)
 
 MIE 6/5/2020
 - Logo sin optimizar
@@ -90,6 +97,10 @@ LUN - 27/04/2020
 
 
 ## ANT DESIGN PRO
+- Tienes este projecto como MyApp en la carpeta Users/franciscoriosgalan
+- Links / tutos:
+  https://pro.ant.design/docs/router-and-nav
+  https://pro.ant.design/
 - Usar la carpeta mock
   - [ ] Traspasar todo lo hecho en laParadaReact o al reves??? 
     - [ ] Servidor local GraphQL y Apollo

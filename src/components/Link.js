@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link as ReachLink } from '@reach/router'
+import { Link } from '@reach/router'
 
 export const Link = props => {
   return (
-    <ReachLink
+    <Link
       {...props}
       onClick={() => {
         window.scrollTo(0, 0)

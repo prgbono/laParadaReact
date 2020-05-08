@@ -8,7 +8,7 @@ import { SpecialtiesList } from "./SpecialtiesList";
 // import { useUserProfiles } from "../hooks";
 // import { Users } from "./Users";
 import '../styles/App.css';
-import { Router, Link } from '@reach/router'
+import { Router } from '@reach/router'
 import Dashboard from '../pages/Dashboard';
 
 const App = () => {
@@ -72,13 +72,13 @@ const App = () => {
 
   return(
     <div className="App">
-      <nav>
+      {/* <nav>
         <Link to="/">Inicio</Link> |{" "}
         <Link to="products">Productos</Link> |{" "}
         <Link to="products/123">Producto 123</Link> |{" "}
         <Link to="categories">Categorias</Link> |{" "}
         <Link to="specialties">Especialidades</Link> 
-      </nav>
+      </nav> */}
       <Router>
         <InicioMenuButton path="/" />
         {/* <ProductsMenuButton path="products/:productId" /> */}

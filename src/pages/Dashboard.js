@@ -2,13 +2,41 @@ import React, { useState } from 'react'
 import { Layout, Menu } from 'antd';
 import { DesktopOutlined, PieChartOutlined, FileOutlined, UserOutlined } from '@ant-design/icons';
 import logo from '../assets/logo/logo.png'
-import { Link } from '../components/Link'
+// import { Link } from '../components/Link'
+// import { CategoriesList } from '../components/CategoriesList'
+// import { ProductsList } from '../components/ProductsList'
+// import { SpecialtiesList } from '../components/SpecialtiesList'
+import { Router, Link } from '@reach/router'
 
 
 const Dashboard = () => {
   console.log('Component pages/Dashboard')
   const { Header, Footer, Sider, Content } = Layout;
   const [siderCollapsed, setSiderCollapsed] = useState(false);
+
+  // const CategoriesListMenuButton = () => {
+  //   return(
+  //     <div>
+  //       <p>Esto es la página CategoriesList</p>
+  //       <CategoriesList />
+  //     </div>
+  //   )
+  // }
+
+  // const ProductsListMenuButton = () => {
+  //   return(
+  //     <ProductsList />
+  //   )
+  // }
+
+  // const SpecialtiesListMenuButton = () => {
+  //   return(
+  //     <div>
+  //       <p>Esto es la página SpecialtiesList</p>
+  //       <SpecialtiesList />
+  //     </div>
+  //   )
+  // }
 
   return (
     <>
@@ -34,9 +62,13 @@ const Dashboard = () => {
             >
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Dashboard
+              <Link to="/">
+              </Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<DesktopOutlined />}>
-              Productos
+              <Link to="/products">
+                Productos
+              </Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<UserOutlined />}>
               Pedidos
@@ -60,6 +92,11 @@ const Dashboard = () => {
           <Content style={{ margin: '0 16px' }}>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
               Bill is a cat.
+              {/* <Router>
+                <ProductsListMenuButton path="products" />
+                <CategoriesListMenuButton path="categories" />
+                <SpecialtiesListMenuButton path="specialties" />
+              </Router> */}
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
