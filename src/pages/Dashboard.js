@@ -1,12 +1,12 @@
-import React from 'react'
-import { ProductsList } from '../components/ProductsList'
+// import React from 'react'
+// import { ProductsList } from '../components/ProductsList'
 
-const Dashboard = () => {
-  console.log('Component pages/Dashboard')
+// const Dashboard = () => {
+//   console.log('Component pages/Dashboard')
   
-  return (
-    <ProductsList />
-  )
-}
+//   return (
+//     <ProductsList />
+//   )
+// }
   
-export default Dashboard
+// export default Dashboard

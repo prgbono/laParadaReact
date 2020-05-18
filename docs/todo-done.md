@@ -1,7 +1,10 @@
 ## HOY 
+- font-weight light ver en CSS de Master CICE (disco duro)
+- font-weight lighter para toda la app. Ponerla haciendole wrapping al componente App. Ver si clave tiene algo así.
+- cargar especialidades
+- Que no se cargue el contenido de los componentes arriba de la página
 
 ## TODO
-- Qué es Emotion- https://emotion.sh/docs/introduction
 - Continuar los links/tutoriales:
   https://www.howtographql.com/react-apollo/2-queries-loading-links/
   https://www.apollographql.com/docs/react/data/local-state/
@@ -41,6 +44,8 @@
 ## DONE
 LUN 18/5/2020
 - Cargar el contenido dependiendo de la opción elegida en el sidebar. Tendrás que mantener el componente de la estructura en todas las págs... METER EL LAYOUT EN APP.js CAPULLO!!
+- Stilo a los links del menu sider para que el color de la letra sea blanco.
+- Qué es Emotion- https://emotion.sh/docs/introduction
 
 JUE 7/5/2020
 - Pasar logo a png y reducir el tamaño
