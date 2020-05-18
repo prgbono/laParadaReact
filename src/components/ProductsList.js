@@ -14,7 +14,6 @@ export const ProductsList = () => {
   return(
     <>
     {productsToRender.map(product => {
-      // console.log('Product: ', product)
       return(
         <Product
           key={product}

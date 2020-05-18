@@ -1,5 +1,4 @@
 ## HOY 
-- Cargar el contenido dependiendo de la opción elegida en el sidebar
 
 ## TODO
 - Qué es Emotion- https://emotion.sh/docs/introduction
@@ -40,6 +39,9 @@
 
 
 ## DONE
+LUN 18/5/2020
+- Cargar el contenido dependiendo de la opción elegida en el sidebar. Tendrás que mantener el componente de la estructura en todas las págs... METER EL LAYOUT EN APP.js CAPULLO!!
+
 JUE 7/5/2020
 - Pasar logo a png y reducir el tamaño
 - Ver Link de ReachRouter que implementé ayer en Link (components)
@@ -97,7 +99,8 @@ LUN - 27/04/2020
 
 
 ## ANT DESIGN PRO
-- Tienes este projecto como MyApp en la carpeta Users/franciscoriosgalan
+- Tienes este projecto como MyApp en la carpeta Users/franciscoriosgalan. 
+  Se ejecuta con yarn start y corre por defecto en el 8000
 - Links / tutos:
   https://pro.ant.design/docs/router-and-nav
   https://pro.ant.design/
@@ -106,8 +109,7 @@ LUN - 27/04/2020
     - [ ] Servidor local GraphQL y Apollo
     - [ ] Conexión con Firestore
     - [ ] App.js… carpeta de documentación, archivo de readme…. changeLog, Todo-done, version de react
-- Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para 
-  tener claro el UI. Buscar por ahí en AntD (https://ant.design/) que es lo usado en HK ClaveX
+- Definir las pantallas para esas tres 'entidades', productos, especialidades y categorías para tener claro el UI. Buscar por ahí en AntD (https://ant.design/) que es lo usado en HK ClaveX
   Template Ant Design Pro Master -> https://scaffold.ant.design/#/scaffolds/ant-design-pro
   He encontrado una template que puede ser bastante interesante. Está en Downloads / My app. 
   - [ ] Asegurarte que es de react-create-app. 
