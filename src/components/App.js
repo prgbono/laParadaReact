@@ -16,13 +16,6 @@ const App = () => {
   return(
     <AppGeneralStyle>
       <div className="App">
-        <Router>
-          <ProductsList path="products" />
-          <CategoriesList path="categories" />
-          <SpecialtiesList path="specialties" />
-          {/* // TODO menu items left*/}
-        </Router>
-
         <Layout style={{ minHeight: '100vh' }}>
           <Sider 
             collapsible 
@@ -53,23 +46,23 @@ const App = () => {
                   <LinkFontColor>Productos</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="3" icon={<UserOutlined />}>
-                <Link to="/pedidos">
+              {/* <Menu.Item key="3" icon={<UserOutlined />}>
+                <Link to="/orders">
                   <LinkFontColor>Pedidos</LinkFontColor>
                 </Link>
               </Menu.Item>
               <Menu.Item key="4" icon={<UserOutlined />}>
-                <Link to="/clientes">
+                <Link to="/customers">
                   <LinkFontColor>Clientes</LinkFontColor>
                 </Link>
               </Menu.Item>
               <Menu.Item key="5" icon={<UserOutlined />}>
-                <Link to="/mi-cuenta">
+                <Link to="/my-account">
                   <LinkFontColor>Mi cuenta</LinkFontColor>
                 </Link>
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item key="6" icon={<FileOutlined />}>
-                <Link to="/especialidades">
+                <Link to="/specialties">
                   <LinkFontColor>Especialidades</LinkFontColor>
                 </Link>
               </Menu.Item>

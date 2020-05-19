@@ -1,6 +1,4 @@
 ## HOY 
-- cargar especialidades
-- Que no se cargue el contenido de los componentes arriba de la página
 
 ## TODO
 - Continuar los links/tutoriales:
@@ -42,6 +40,7 @@
 ## DONE
 MAR 19/5/20
 - font-weight lighter para toda la app. Ponerla haciendole wrapping al componente App. Ver si clave tiene algo así. AppGeneralStyle
+- Que no se cargue el contenido de los componentes arriba de la página
 
 LUN 18/5/2020
 - Cargar el contenido dependiendo de la opción elegida en el sidebar. Tendrás que mantener el componente de la estructura en todas las págs... METER EL LAYOUT EN APP.js CAPULLO!!
