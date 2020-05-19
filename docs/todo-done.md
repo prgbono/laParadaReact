@@ -1,6 +1,4 @@
 ## HOY 
-- font-weight light ver en CSS de Master CICE (disco duro)
-- font-weight lighter para toda la app. Ponerla haciendole wrapping al componente App. Ver si clave tiene algo así.
 - cargar especialidades
 - Que no se cargue el contenido de los componentes arriba de la página
 
@@ -42,6 +40,9 @@
 
 
 ## DONE
+MAR 19/5/20
+- font-weight lighter para toda la app. Ponerla haciendole wrapping al componente App. Ver si clave tiene algo así. AppGeneralStyle
+
 LUN 18/5/2020
 - Cargar el contenido dependiendo de la opción elegida en el sidebar. Tendrás que mantener el componente de la estructura en todas las págs... METER EL LAYOUT EN APP.js CAPULLO!!
 - Stilo a los links del menu sider para que el color de la letra sea blanco.
