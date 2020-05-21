@@ -1,7 +1,14 @@
 ## HOY 
+- Modificar la query para traer stock y foto
+- ver cómo formatear cantidades. Para ello usar formatNumberWithThousands de claveX
+- Ordenar alfabéticamente las columnas en las que se pueda
+- Ver opciones del onChange y de la API en general
 
 ## TODO
-- UI de Productos. CRUD. Table de productos. En la tabla de productos poner un indicador de las existencias del producto, con colores?
+- UI de Productos. CRUD. Table de productos. 
+- Detalle de producto al pinchar en una row
+- Context (utils.context.js) para productos cuando sea necesario. Por ahora he pasado products de ProductsList a PRoductsTable por props
+- En la tabla de productos poner un indicador de las existencias del producto, con colores?
 - Buscadores de ítems de las tablas encima de las mismas. En el mismo rollo que AntPro
 - Quitar de las tablas los números de paginación si no hay más de 1 pág de resultados
 - UI de Especialidades. CRUD
@@ -46,7 +53,8 @@ https://codelabs.developers.google.com/codelabs/firestore-web/#11
 
 ## DONE
 JUE 21/5/2020
-- Cambiar los componentes de Components a Pages
+- Cambiar los componentes de Components a Pages 
+- Leer productos de FIrestore y presentarlos en tabla de la sección Productos
 
 MIE 20/5/2020
 - Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto
