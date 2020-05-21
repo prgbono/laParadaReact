@@ -1,7 +1,11 @@
 ## HOY 
+- UI de Productos. CRUD. Table de productos. 
+  - Read DONE
+  - Create
+  - Update/Edit
+  - Remove
 
 ## TODO
-- UI de Productos. CRUD. Table de productos. 
 - Detalle de producto al pinchar en una row
 - Context (utils.context.js) para productos cuando sea necesario. Por ahora he pasado products de ProductsList a PRoductsTable por props. Si vuelvo a usar products en algun otro lado pensar en ProductsContext
 
@@ -17,7 +21,6 @@
 - Continuar los links/tutoriales:
   https://www.howtographql.com/react-apollo/2-queries-loading-links/
   https://www.apollographql.com/docs/react/data/local-state/
-- Personalizar los iconos del menú
 - Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
 - Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId - path='product/:id'
 - Pestaña principal Inicio (Dashboard): PEdidos del día, productos más vendidos, productos bajos de stock, mejores clientes....
@@ -55,6 +58,7 @@ JUE 21/5/2020
 - Cambiar los componentes de Components a Pages 
 - Leer productos de FIrestore y presentarlos en tabla de la sección Productos
 - En la tabla de productos poner un indicador de las existencias del producto, con colores
+- Personalizar los iconos del menú Sider
 
 MIE 20/5/2020
 - Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto

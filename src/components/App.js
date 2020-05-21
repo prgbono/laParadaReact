@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../styles/App.css';
 import { Layout, Menu } from 'antd';
 import logo from '../assets/logo/logo.png';
-import { DesktopOutlined, PieChartOutlined, 
-  FileOutlined, UserOutlined } from '@ant-design/icons';
+import { LineChartOutlined, TableOutlined, IdcardOutlined, FileAddOutlined, 
+  BarcodeOutlined, UnorderedListOutlined, UserOutlined } from '@ant-design/icons';
 import styled from '@emotion/styled'
 import { Dashboard, CategoriesPage, SpecialtiesPage, CustomersPage, OrdersPage, 
   MyAccountPage, ProductsPage } from "../pages";
@@ -36,32 +36,32 @@ const App = () => {
               mode="inline"
               style={{ textAlign: 'left' }}
               >
-              <Menu.Item key="1" icon={<PieChartOutlined />}>
+              <Menu.Item key="1" icon={<LineChartOutlined />}>
                 <Link to="/">
                   <LinkFontColor>Dashboard</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="2" icon={<DesktopOutlined />}>
+              <Menu.Item key="2" icon={<TableOutlined />}>
                 <Link to="/products">
                   <LinkFontColor>Productos</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="4" icon={<UserOutlined />}>
+              <Menu.Item key="4" icon={<IdcardOutlined />}>
                 <Link to="/customers">
                   <LinkFontColor>Clientes</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="3" icon={<UserOutlined />}>
+              <Menu.Item key="3" icon={<FileAddOutlined />}>
                 <Link to="/orders">
                   <LinkFontColor>Pedidos</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="6" icon={<FileOutlined />}>
+              <Menu.Item key="6" icon={<UnorderedListOutlined />}>
                 <Link to="/specialties">
                   <LinkFontColor>Especialidades</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="7" icon={<FileOutlined />}>
+              <Menu.Item key="7" icon={<BarcodeOutlined />}>
                 <Link to="/categories">
                   <LinkFontColor>Categorías</LinkFontColor>
                 </Link>
