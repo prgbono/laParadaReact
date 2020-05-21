@@ -46,21 +46,16 @@ const App = () => {
                   <LinkFontColor>Productos</LinkFontColor>
                 </Link>
               </Menu.Item>
-              {/* <Menu.Item key="3" icon={<UserOutlined />}>
-                <Link to="/orders">
-                  <LinkFontColor>Pedidos</LinkFontColor>
-                </Link>
-              </Menu.Item>
               <Menu.Item key="4" icon={<UserOutlined />}>
                 <Link to="/customers">
                   <LinkFontColor>Clientes</LinkFontColor>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="5" icon={<UserOutlined />}>
-                <Link to="/my-account">
-                  <LinkFontColor>Mi cuenta</LinkFontColor>
+              <Menu.Item key="3" icon={<UserOutlined />}>
+                <Link to="/orders">
+                  <LinkFontColor>Pedidos</LinkFontColor>
                 </Link>
-              </Menu.Item> */}
+              </Menu.Item>
               <Menu.Item key="6" icon={<FileOutlined />}>
                 <Link to="/specialties">
                   <LinkFontColor>Especialidades</LinkFontColor>
@@ -69,6 +64,11 @@ const App = () => {
               <Menu.Item key="7" icon={<FileOutlined />}>
                 <Link to="/categories">
                   <LinkFontColor>Categorías</LinkFontColor>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="5" icon={<UserOutlined />}>
+                <Link to="/my-account">
+                  <LinkFontColor>Mi cuenta</LinkFontColor>
                 </Link>
               </Menu.Item>
             </Menu>

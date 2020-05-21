@@ -19,6 +19,8 @@ const typeDefs = gql `
     existencias: Float
     precio: Float
     pvp: Float
+    foto: String
+    minStock: Float
   }
 
   type Specialty {
