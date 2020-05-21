@@ -3,7 +3,7 @@ import { useQuery } from 'react-apollo'
 import { GET_PRODUCTS } from '../Queries'
 import { ProductsTable } from '../components/ProductsTable'
 
-export const ProductsList = () => {
+export const ProductsPage = () => {
   const { loading, error, data } = useQuery(GET_PRODUCTS);
 
   if (loading) return <div>Cargando productos...</div>

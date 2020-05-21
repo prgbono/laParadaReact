@@ -3,14 +3,14 @@ import { useMutation, useQuery } from "react-apollo";
 import { SET_CATEGORY, GET_CATEGORIES } from "../Queries";
 
 
-export function CategoriesList() {
+export function CategoriesPage() {
   const { loading, error, data } = useQuery(GET_CATEGORIES)
   const [setCategory] = useMutation(SET_CATEGORY);
 
   if (loading) return <div>Cargando categorías...</div>
   if (error) return <div>Error cargando categorías, `${error.message}`</div>
 
-  console.log('CategoriesList Component - data: ',data)
+  console.log('CategoriesPage - data: ',data)
 
   return data.getCategories.map(({ id, nombre }) => {
     let input;

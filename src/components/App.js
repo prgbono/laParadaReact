@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import '../styles/App.css';
 import { Layout, Menu } from 'antd';
 import logo from '../assets/logo/logo.png';
-import { DesktopOutlined, PieChartOutlined, FileOutlined, UserOutlined } from '@ant-design/icons';
+import { DesktopOutlined, PieChartOutlined, 
+  FileOutlined, UserOutlined } from '@ant-design/icons';
 import styled from '@emotion/styled'
-import { ProductsList } from "../pages/ProductsList";
-import { CategoriesList } from "../pages/CategoriesList";
-import { SpecialtiesList } from "../pages/SpecialtiesList";
+import { Dashboard, CategoriesPage, SpecialtiesPage, CustomersPage, OrdersPage, 
+  MyAccountPage, ProductsPage } from "../pages";
 import { Router, Link } from '@reach/router'
 
 const App = () => {
@@ -78,10 +78,13 @@ const App = () => {
             <Content style={{ margin: '0 16px' }}>
               <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                 <Router>
-                  <ProductsList path="products" />
-                  <CategoriesList path="categories" />
-                  <SpecialtiesList path="specialties" /> 
-                  {/* // TODO menu items left*/}
+                  <Dashboard path="/" />
+                  <ProductsPage path="products" />
+                  <CustomersPage path="customers" />
+                  <OrdersPage path="orders" />
+                  <SpecialtiesPage path="specialties" /> 
+                  <CategoriesPage path="categories" />
+                  <MyAccountPage path="my-account" /> 
                 </Router>
               </div>
             </Content>
