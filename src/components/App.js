@@ -4,9 +4,9 @@ import { Layout, Menu } from 'antd';
 import logo from '../assets/logo/logo.png';
 import { DesktopOutlined, PieChartOutlined, FileOutlined, UserOutlined } from '@ant-design/icons';
 import styled from '@emotion/styled'
-import { ProductsList } from "./ProductsList";
-import { CategoriesList } from "./CategoriesList";
-import { SpecialtiesList } from "./SpecialtiesList";
+import { ProductsList } from "../pages/ProductsList";
+import { CategoriesList } from "../pages/CategoriesList";
+import { SpecialtiesList } from "../pages/SpecialtiesList";
 import { Router, Link } from '@reach/router'
 
 const App = () => {

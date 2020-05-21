@@ -46,7 +46,7 @@ https://codelabs.developers.google.com/codelabs/firestore-web/#11
 
 ## DONE
 JUE 21/5/2020
-
+- Cambiar los componentes de Components a Pages
 
 MIE 20/5/2020
 - Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto

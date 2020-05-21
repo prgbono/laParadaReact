@@ -1,8 +1,8 @@
 import React from 'react'
-import Product from './Product'
+import Product from '../components/Product'
 import { useQuery } from 'react-apollo'
 import { GET_PRODUCTS } from '../Queries'
-import { ProductsTable } from './ProductsTable'
+import { ProductsTable } from '../components/ProductsTable'
 
 export const ProductsList = () => {
   const { loading, error, data } = useQuery(GET_PRODUCTS);
