@@ -1,15 +1,22 @@
 ## HOY 
 
 ## TODO
+- UI de Productos. CRUD. Table de productos. En la tabla de productos poner un indicador de las existencias del producto, con colores?
+- Buscadores de ítems de las tablas encima de las mismas. En el mismo rollo que AntPro
+- Quitar de las tablas los números de paginación si no hay más de 1 pág de resultados
+- UI de Especialidades. CRUD
+- UI de Categorias. CRUD
+- UI de Dashboard 
+- ClaveX - Src/Fragments/Sider.js/config - EL objeto config es el menú. Hacerlo igual
+- Incluor los iconos de CompassAllergens??? crustáceos???
+- Login Page -> https://www.howtographql.com/react-apollo/5-authentication/
+- Botones en el header, como en AntPro??
 - Continuar los links/tutoriales:
   https://www.howtographql.com/react-apollo/2-queries-loading-links/
   https://www.apollographql.com/docs/react/data/local-state/
-- ClaveX - Src/Fragments/Sider.js/config - EL objeto config es el menú. Hacerlo igual
-- Es necesario el componente Link??
-- Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto
 - Solucionar el error común que aparece al usar la app (error 400 -> Unhandled Rejection (Error): Network error: Response not successful: Received status code 400)
 - Reach Router -> Cargar artículo individualmente una vez dentro de la lista de artículos (pasar el id). NEsted links. Hacer el reach router /products/productId - path='product/:id'
-- Pestaña principal Inicio: PEdidos del día, productos más vendidos, productos bajos de stock, mejores clientes....
+- Pestaña principal Inicio (Dashboard): PEdidos del día, productos más vendidos, productos bajos de stock, mejores clientes....
 - Añadir un LocationProvider para el histórico?? Puede ser bastante interesante y está  implementado en ClaveX
 - Hace falta una folder src/pages??
 - Definir en Firestore la relación especialidades y categorías. Echar un vistazo https://www.youtube.com/watch?v=jm66TSlVtcc
@@ -20,6 +27,7 @@
 - Como gestionar lo de los id que no devuelve graphQL. Ver cómo se trabaja con esto. Posibilidad de firegraph o algo que te facilite el manejo de ID's
 - Reach Router para dividir las vistas de categorias, productos y eso
 - Editar las reglas de Firebase para que la BD no sea pública - https://console.firebase.google.com/project/laparada-40337/database/firestore/rules
+https://codelabs.developers.google.com/codelabs/firestore-web/#11
   Hemos detectado los siguientes problemas en tus reglas de seguridad:
   Cualquier usuario puede leer toda tu base de datos
   Cualquier usuario puede escribir en toda tu base de datos
@@ -29,15 +37,21 @@
 - Meter imágenes a la BBDD, por ejemplo a productos
 - Recomendable el tuto de FullStack de Apollo https://www.apollographql.com/docs/tutorial/introduction/
 - Los campos especialidad y categoría de los productos deben estar reducidos a las opciones de un selectable
-- Probar a quitar el objeto Firebase de src/Firebase (y los imports de Firebase en el lado cliente). Esto 
-  es porque supuestamente no hace falta tras haberlo añadido a /server/scr/server.js. Puedo borrar el archivo src/firebase? No debería haber presencia de Firebase en el front si ya GraphQL se ha conectado con éste. 
-- Imrpimir en PDF todos los tutoriales seguidos y meterlos en /docs
+- Probar a quitar el objeto Firebase de src/Firebase (y los imports de Firebase en el lado cliente). Esto es porque supuestamente no hace falta tras haberlo añadido a /server/scr/server.js. Puedo borrar el archivo src/firebase? No debería haber presencia de Firebase en el front si ya GraphQL se ha conectado con éste. 
+- Firebase hosting
 - Gráficas. Añadir dependiendo de las ventas y los pedidos... Librería Nivo https://nivo.rocks/components
 - TODO's y consoles
 - Interfaz movil. Flutter? ReactNative?
 
 
 ## DONE
+JUE 21/5/2020
+
+
+MIE 20/5/2020
+- Añadir a los productos un umbral mínimo de existencias desde el cual avisar y tambien campo foto
+- Meter el componente tabla de Ant
+
 MAR 19/5/20
 - font-weight lighter para toda la app. Ponerla haciendole wrapping al componente App. Ver si clave tiene algo así. AppGeneralStyle
 - Que no se cargue el contenido de los componentes arriba de la página
